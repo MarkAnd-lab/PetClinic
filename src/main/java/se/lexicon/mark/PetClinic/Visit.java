@@ -1,8 +1,10 @@
 package se.lexicon.mark.PetClinic;
 
+import javax.persistence.Entity;
 import java.time.LocalDate;
 import java.util.Objects;
 
+@Entity
 public class Visit {
 
     private String visitId;
