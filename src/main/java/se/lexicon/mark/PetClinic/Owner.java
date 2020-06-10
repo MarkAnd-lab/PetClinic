@@ -1,6 +1,7 @@
 package se.lexicon.mark.PetClinic;
 
 import javax.persistence.Entity;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -89,4 +90,6 @@ public class Owner {
                 ", telephone='" + telephone + '\'' +
                 '}';
     }
+
+
 }
