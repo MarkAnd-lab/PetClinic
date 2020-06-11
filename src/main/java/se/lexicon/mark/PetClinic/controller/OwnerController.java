@@ -27,4 +27,10 @@ public class OwnerController {
         List<Owner> responseBody = (List<Owner>) ownerRepository.findAll();
         return ResponseEntity.ok(responseBody);
     }
+
+    @GetMapping("/hello")
+    public String greeting(){
+        return "Hello World Wide Web 2";
+    }
 }
+
