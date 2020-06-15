@@ -1,11 +1,22 @@
 package se.lexicon.mark.PetClinic;
 
+import org.hibernate.annotations.GenericGenerator;
+import org.springframework.data.annotation.Id;
+
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import java.util.List;
 import java.util.Objects;
 
 @Entity
 public class Owner {
+
+    @Id
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(
+            name = "UUID",
+            strategy = "org.hibernate.id.UUIDGenerator"
+    )
     private String ownerId;
     private String firstName;
     private String lastName;
@@ -27,11 +38,12 @@ public class Owner {
         this.telephone = telephone;
     }
 
+
     public String getOwnerId() {
         return ownerId;
     }
 
-   public String getFirstName() {
+    public String getFirstName() {
         return firstName;
     }
 
